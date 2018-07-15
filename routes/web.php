@@ -40,9 +40,17 @@ Route::get('/delete-category/{category_id}', 'CategoryController@RemoveCategory'
 Route::get('/add-manufacture', 'ManufactureController@index');
 Route::post('/save-manufacture', 'ManufactureController@SaveManufacture');
 Route::get('/all-manufacture', 'ManufactureController@AllManufacture');
+Route::get('/publish_manufacture/{manufacture_id}', 'ManufactureController@PublishManufacture');
+Route::get('/unpublish_manufacture/{manufacture_id}', 'ManufactureController@UnPublishManufacture');
+Route::get('/edit-manufacture/{manufacture_id}', 'ManufactureController@EditManufacture');
+Route::post('/update-manufacture/{manufacture_id}', 'ManufactureController@UpdateManufacture');
+Route::get('/delete-manufacture/{manufacture_id}', 'ManufactureController@RemoveManufacture');
 
 
 
+// Products ........................................
+Route::get('/add-product', 'ProductController@AddProduct');
+Route::post('save-product', 'ProductController@SaveProduct');
 
 
 

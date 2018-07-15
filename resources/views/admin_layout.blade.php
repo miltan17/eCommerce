@@ -351,9 +351,9 @@
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Products </span><span class="label label-important"> 3 </span></a>
 							<ul>
-								<li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Product</span></a></li>
+								<li><a class="submenu" href="{{URL::to('/add-product')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Product</span></a></li>
 								<li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> All products</span></a></li>
-							</ul>	
+							</ul>
 						</li>
 
 						<li><a href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Slider</span></a></li>

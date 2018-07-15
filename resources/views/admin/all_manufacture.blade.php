@@ -49,11 +49,11 @@
 						<td class="center">
 							
 							@if($manufacture->publication_status == 1)
-								<a class="btn btn-danger" href="{{ URL::to('/unpublish/'.$manufacture->manufacture_id) }}">
+								<a class="btn btn-danger" href="{{ URL::to('/unpublish_manufacture/'.$manufacture->manufacture_id) }}">
 									<i class="halflings-icon white thumbs-down"></i>
 								</a>
 							@else
-								<a class="btn btn-success" href="{{ URL::to('/publish/'.$manufacture->manufacture_id) }}">
+								<a class="btn btn-success" href="{{ URL::to('/publish_manufacture/'.$manufacture->manufacture_id) }}">
 									<i class="halflings-icon white thumbs-up"></i>
 								</a>
 							@endif

@@ -15,14 +15,17 @@ class CategoryController extends Controller
     }
 
     public function SaveCategory(Request $request){
-    	$data = array();
-    	$data['category_id'] = $request->category_id;
-    	$data['category_name'] = $request->category_name;
-    	$data['category_description'] = $request->category_description;
-    	$data['publication_status'] = $request->publication_status;
+    // 	$data = array();
+    // 	$data['category_id'] = $request->category_id;
+    // 	$data['category_name'] = $request->category_name;
+    // 	$data['category_description'] = $request->category_description;
+    // 	$data['publication_status'] = $request->publication_status;
 
-    	DB::table('tbl_category')->insert($data);
-    	$message = $data['category_name']." Added Successfully !!";
+    // 	DB::table('tbl_category')->insert($data);
+
+    	DB::insert('insert into tbl_category (category_name, category_description, publication_status) values (?, ?, ?)', [$request->category_name, $request->category_description, $request->publication_status]);
+
+    	$message = $request->category_name." Added Successfully !!";
     	Session::put('message', $message);
     	return Redirect::to('/all-category');
     }
